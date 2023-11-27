@@ -1,22 +1,20 @@
+import UINavSidebar from "./Navigation/Sidebar"
 import UIIcon from "./Icon"
 import { FaBars } from "react-icons/fa"
 import { MdJoinFull } from "react-icons/md"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { useContext } from "react"
+import { ContextMain } from "../data/context/main"
 
 const UINavMain = () => {
+   const context = useContext(ContextMain)
    return (
       <>
          <motion.nav
-            initial={{
-               y: "var(--y-from)",
-            }}
-            animate={{
-               y: "var(--y-to)",
-            }}
-            exit={{
-              y:"var(--y-from)"
-            }}
-            className="p-4 flex flex-row justify-between items-center bg-gradient-to-br from-primary-500 to-rose-500 drop-shadow-sm h-full [--y-from:-100px] [--y-to:0px]"
+            initial={{y: "var(--y-from)"}}
+            animate={{y: "var(--y-to)",}}
+            exit={{y:"var(--y-from)"}}
+            className="p-4 flex flex-row justify-between items-center bg-gradient-to-br from-primary-500 to-rose-500 shadow-lg h-full [--y-from:-100px] [--y-to:0px]"
          >
             <div className="flex flex-row space-x-3 items-center cursor-pointer">
                <motion.div id="brand-container"
@@ -31,12 +29,15 @@ const UINavMain = () => {
                   The LUX
                </h1>
             </div>
-            <button>
-              <UIIcon classes="w-auto h-6 text-gray-50 opacity-80 cursor-pointer">
+            <motion.button onClick={()=>context.navSidebar.show()} whileTap={{scale:0.9}}>
+              <UIIcon classes="w-auto h-5 text-gray-50 opacity-80 cursor-pointer">
                 <FaBars />
               </UIIcon>
-            </button>
+            </motion.button>
          </motion.nav>
+         <AnimatePresence mode="sync">
+            {context.navSidebar.visibility && <UINavSidebar />}
+         </AnimatePresence>
       </>
    )
 }

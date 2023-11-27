@@ -5,7 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { FaWhmcs } from "react-icons/fa";
 import { FaUsersCog } from "react-icons/fa";
 
-export const utilNavigation = [
+export const utilsNavigation = [
    { tag: "dashboard", link: "/dashboard", icon: <FaHome /> },
    { tag: "bookings", link: "/bookings", icon: <FaBookmark /> },
    { tag: "cabins", link: "/cabins", icon: <FaHotel /> },

@@ -7,7 +7,7 @@ export type TypeContextTheme = {
 
 export const ContextTheme: TypeContextTheme = {
    current: "light",
-   changeTheme: (theme: string) => {
+   changeTheme: (theme) => {
       theme
    },
 }
