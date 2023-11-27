@@ -12,7 +12,7 @@ export default {
             sans: ["Montserrat"],
          },
          colors: {
-            main: {
+            primary: {
                100: "#e4d8f4",
                200: "#c8b2e9",
                300: "#ad8bdf",

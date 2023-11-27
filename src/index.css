@@ -4,8 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-  .main{
-    @apply p-8
+@layer base{
+  header{
+    @apply fixed left-0 top-0 w-full h-14
   }
+  main{
+    @apply px-5 py-4 flex flex-col space-y-6 mt-14
+  }
+}
+
+@layer components{
+  
 }

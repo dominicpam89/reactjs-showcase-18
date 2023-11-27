@@ -6,7 +6,7 @@ const UIRootPage = ()=>{
     <header>
       <UINavMain />
     </header>
-    <main className="main">
+    <main>
       <Outlet />
     </main>
   </>
