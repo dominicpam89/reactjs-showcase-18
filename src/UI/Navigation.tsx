@@ -6,7 +6,7 @@ const UINavMain = () => {
       <div>
         <img src="/logo.png" />
       </div>
-      
+        
     </nav>
   </>
 }
