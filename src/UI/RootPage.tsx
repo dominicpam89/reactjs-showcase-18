@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const RootPage = ()=>{
+const UIRootPage = ()=>{
   return <>
     <header>
       
@@ -11,4 +11,4 @@ const RootPage = ()=>{
   </>
 }
 
-export default RootPage
+export default UIRootPage
