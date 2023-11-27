@@ -1,6 +1,6 @@
 import { FaHome } from "react-icons/fa";
 
-export const navigationList = [
+export const utilNavigation = [
   {tag:"dashboard", link:"/dashboard", icon: <FaHome />},
   {tag:"bookings", link:"/bookings", icon: <FaHome />},
   {tag:"cabins", link:"/cabins", icon: <FaHome />},
