@@ -1,3 +1,5 @@
+
+
 type Props = {
    cabin: {
       created_at: string
@@ -34,11 +36,15 @@ const CabinsCabin: React.FC<Props> = ({ cabin }) => {
                         ${cabin.regularPrice - cabin.discount}
                      </span>
                      <span>
-                        <span className="text-xs"><i> after the discount and tax. Before it was </i></span>
-                        <span className="font-bold text-danger-400 text-md line-through">${cabin.discount}</span>
+                        <span className="text-xs"><i>after the discount and tax. Before it was &nbsp;</i></span>
+                        <span className="relative font-bold text-danger-400/80 text-md cabin-discount">${cabin.discount}</span>
                      </span>
                   </h3>
                </div>
+            </div>
+            <div id="cabin-panel-btn" className="w-full flex flex-row space-x-2">
+               <button className="w-6/12 rounded-sm btn-sm btn-primary">Edit</button>
+               <button className="w-6/12 rounded-sm btn-sm btn-primary-outlined">Delete</button>
             </div>
          </div>
       </>

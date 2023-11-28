@@ -4,29 +4,45 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body{
+@layer base {
+  body {
     @apply dark:bg-gray-900 dark:text-gray-100
   }
-  header{
+
+  header {
     @apply fixed left-0 top-0 w-full h-14
   }
-  main{
+
+  main {
     @apply px-5 py-4 flex flex-col space-y-6 mt-14
   }
 }
 
-@layer components{
-  .btn{
+@layer components {
+  .btn {
     @apply rounded-md font-sans font-normal transition-all duration-200 ease-in-out
   }
-  .btn-sm{
+
+  .btn-sm {
     @apply px-2 py-1
   }
-  .btn-primary{
+
+  .btn-primary {
     @apply bg-gradient-to-br from-primary-600 to-pink-500/90 text-gray-50 hover:bg-gradient-to-b hover:scale-105
   }
-  .btn-primary-outlined{
+
+  .btn-primary-outlined {
     @apply border border-solid border-primary-700 text-primary-700 hover:bg-gradient-to-tr hover:text-primary-600
+  }
+
+  .cabin-discount::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    height: 2px;
+    width: 100%;
+    transform: translateY(-50%) rotateZ(-15deg);
+    @apply bg-danger-500/80
   }
 }
