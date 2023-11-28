@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { TypeContextThemeOptions } from "../context/theme"
 
 export const useHooksNavSidebar = () => {
@@ -13,6 +13,14 @@ export const useHooksNavSidebar = () => {
 
 export const useHooksTheme = () => {
    const [theme, setTheme] = useState<TypeContextThemeOptions>("light")
+   useEffect(()=>{
+      if(theme==="dark" || window.matchMedia('(prefers-color-scheme: dark)').matches){
+         document.documentElement.classList.add("dark")
+      }
+      else{
+         document.documentElement.classList.remove("dark")
+      }
+   },[theme])
    const themeState = {
       current: theme,
       changeTheme: (theme:TypeContextThemeOptions) => setTheme(theme),

@@ -15,7 +15,7 @@ const UINavSidebar = () => {
       <UIModal>
          <motion.div
             id="nav-sidebar"
-            className="absolute right-0 top-0 z-[600] min-h-screen w-2/4 bg-gray-50"
+            className="absolute right-0 top-0 z-[600] min-h-screen w-2/4 bg-gray-50 dark:bg-primary-900 dark:text-gray-100"
             initial={{ right: "-100%" }}
             animate={{ right: 0 }}
             exit={{ right: "-100%" }}
@@ -30,10 +30,10 @@ const UINavSidebar = () => {
               Brand
              */}
             <div id="brand-placement" className="p-8 flex flex-col items-center justify-center">
-               <UIIcon classes="w-auto h-12 text-primary-500 opacity-90">
+               <UIIcon classes="w-auto h-12 text-primary-500 dark:text-primary-300 opacity-90">
                   <MdJoinFull />
                </UIIcon>
-               <h1 className="font-bold text-lg text-primary-500">The LUX</h1>
+               <h1 className="font-bold text-lg text-primary-500 dark:text-primary-300">The LUX</h1>
             </div>
             {/* ======================
               List of navigation
@@ -45,7 +45,7 @@ const UINavSidebar = () => {
                         key={nav.tag}
                         onClick={context.navSidebar.hide}
                         className={`transition-all duration-300 ${
-                           nav.link === location.pathname ? "bg-primary-500 text-white" : "text-primary-700"
+                           nav.link === location.pathname ? "bg-primary-500 dark:bg-primary-700 text-white dark:text-gray-300" : "text-primary-700 dark:text-primary-400"
                         }`}
                      >
                         <Link key={nav.tag} to={nav.link} className="flex flex-row space-x-4 items-center">
