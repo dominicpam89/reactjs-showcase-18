@@ -14,5 +14,16 @@
 }
 
 @layer components{
-  
+  .btn{
+    @apply rounded-md font-sans font-normal transition-all duration-200 ease-in-out
+  }
+  .btn-sm{
+    @apply px-2 py-1
+  }
+  .btn-primary{
+    @apply bg-gradient-to-br from-primary-600 to-pink-500/90 text-gray-50 hover:bg-gradient-to-b hover:scale-105
+  }
+  .btn-primary-outlined{
+    @apply border border-solid border-primary-700 text-primary-700 hover:bg-gradient-to-tr hover:text-primary-600
+  }
 }
