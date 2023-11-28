@@ -1,9 +1,9 @@
 const UIFeedbackSpinner = () => {
   return <>
     <span className="
-      w-10 h-10
-      border-[5px] border-dotted 
-      border-t-primary-500 border-l-rose-400 border-b-pink-400 border-r-fuchsia-400 
+      w-[80px] h-[80px]
+      border-[8px] border-dotted 
+      border-t-primary-800 border-r-primary-600/80 border-b-primary-400/60 border-l-primary-200/40 
       rounded-[50%]
       inline-block relative
       animate-spinner
