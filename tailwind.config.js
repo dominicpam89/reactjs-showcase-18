@@ -69,6 +69,9 @@ export default {
                900: "#081c2b",
             },
          },
+         animation:{
+            "spinner": "spin 1s ease-in-out infinite"
+         }
       },
    },
    plugins: [],
